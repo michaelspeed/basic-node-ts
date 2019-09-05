@@ -8,11 +8,16 @@ export default class DefaultController {
     }
 
     public GetValue(req: Request, res: Response) {
-        const value = req.params.id
+        const value = req.params.id;
         if (value === '1122') {
             return res.status(200).json({message: 'All OK'})
         } else {
             return res.status(404).json({message: 'Error'})
         }
+    }
+
+    public PostVales(req: Request, res: Response) {
+        console.log(req.body)
+        return res.status(201).json({message: 'done'})
     }
 }

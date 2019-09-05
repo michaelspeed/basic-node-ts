@@ -6,7 +6,8 @@ export class Routes {
     public defaultController: DefaultController = new DefaultController();
 
     public routes(app: Application): void {
-        app.route('/hello').get(this.defaultController.HelloWorldGet)
-        app.route('/get/:id').get(this.defaultController.GetValue)
+        app.route('/hello').get(this.defaultController.HelloWorldGet);
+        app.route('/get/:id').get(this.defaultController.GetValue);
+        app.route('/post').post(this.defaultController.PostVales)
     }
 }
